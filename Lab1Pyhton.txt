@@ -1,0 +1,15 @@
+#python word guessing game
+secretWord = 'psychedelic'
+secretLetters = ('p', 's', 'y', 'c', 'h', 'e', 'd', 'e', 'l', 'i', 'c')
+print('I am thinking of a word... Guess a letter, you have seven tries')
+for i in range(0, 7):
+    guess = input('Enter your guess:\n>>')
+    if guess in secretLetters:
+        print('Yes,', guess, 'is in the word')
+    elif guess != secretLetters:
+        print('No,', guess, 'is NOT in the word')
+final = input('\nCan you guess the word?\n>>')
+if final == secretWord:
+    print('Winner Winner, Chicken Dinner! That is correct!')
+elif final != secretWord:
+    print('No, the word was', secretWord)
